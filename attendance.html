@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="OIP.ico">
+  <title>Attendance</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+ 
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">HOME</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="schedule.html"  > Schedule </a></li>
+          <li><a href="attendance.html"  > Attendance </a></li>
+          <li><a href="adminlogin.html">Admin </a></li>
+          <li><a href="contact.html"></span>Contact </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">Seminar Schedule</h1>
+
+    </div>
+    <main class="main">
+      <section class="attendance"  >
+        <h2>Attendance Tracking</h2>
+        <p>Select a seminar to update attendance:</p>
+        <select>
+          <option>Faith and Leadership - November 10, 2024</option>
+          <option>Community and Compassion - November 17, 2024</option>
+
+        </select>
+        </br> </br>
+        <form action="submit_attendance.php" method="post">
+
+          <label for="student-id">Student ID:</label>
+          <input type="text" id="student-id" name="student-id" required>
+          </br> </br>
+          <label for="attendance-status">Attendance Status:</label>
+          <select id="attendance-status" name="attendance-status">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+          </select>
+          </br> </br>
+          <button type="submit">Update Attendance</button>
+        </form>
+  </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <p>© 2024 Babcock University</p>
+  </footer>
+</body>
+
+</html>
